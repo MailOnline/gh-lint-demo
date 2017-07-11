@@ -1,0 +1,24 @@
+{
+  "name": "gh-lint-demo",
+  "version": "0.1.0",
+  "description": "gh-lint sample config and scripts",
+  "scripts": {
+    "ghlint": "ghlint -c config.yml -u $GITHUB_USER -p $GITHUB_TOKEN --after=30 --since=30",
+    "test": "npm run ghlint -- --tap | tap-github-issues -l ghlint -u $GITHUB_USER -p $GITHUB_TOKEN --severity",
+    "test-dry": "npm test -- --dry"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MailOnline/gh-lint-demo.git"
+  },
+  "author": "Evgeny Poberezkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MailOnline/gh-lint-demo/issues"
+  },
+  "homepage": "https://github.com/MailOnline/gh-lint-demo#readme",
+  "dependencies": {
+    "gh-lint": "^0.7.0",
+    "tap-github-issues": "^0.7.0"
+  }
+}

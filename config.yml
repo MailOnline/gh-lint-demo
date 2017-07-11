@@ -1,0 +1,35 @@
+---
+org: milojs
+rules:
+#   repo-team: [2, teams: ['#ads', '#cc', '#clj', '#ios-ny', '#ml-nlp', '#mol-fe', '#rc', '#rta', '#support', '#systems', 'Metro', 'IOS']]
+  repo-description: 2
+  repo-readme: 2
+  repo-homepage: 1
+  branch-protection: 2
+  branch-default: 2
+  commit-name:
+    - 1
+    - maxSubjectLength: 64 # default is 50
+      # maxLineLength: 72
+      excludePatterns: ['^TeamCity']
+      excludeAuthors: ['@mol-teamcity', 'TeamCity']
+  pr-approved: 2
+# teams:
+#   '#cc':
+#     rules:
+#       repo-description: 2
+#       repo-readme: 2
+#       repo-homepage: 1
+#       branch-protection: 1
+#       branch-default: 2
+#       commit-name: 1
+#       pr-approved: 1
+repositories:
+  protojs:
+    rules:
+      repo-description: 0
+      repo-readme: 0
+      branch-protection: 0
+      branch-default: 0
+      commit-name: 0
+      pr-approved: 0
