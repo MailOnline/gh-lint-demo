@@ -19,6 +19,6 @@
   "homepage": "https://github.com/MailOnline/gh-lint-demo#readme",
   "dependencies": {
     "gh-lint": "^0.7.0",
-    "tap-github-issues": "^0.7.0"
+    "tap-github-issues": "^0.10.0"
   }
 }
