@@ -5,7 +5,9 @@
   "scripts": {
     "ghlint": "ghlint -c config.yml -u $GITHUB_USER -p $GITHUB_TOKEN --after=30 --since=30",
     "test": "npm run ghlint -- --tap | tap-github-issues -l ghlint -u $GITHUB_USER -p $GITHUB_TOKEN --severity",
-    "test-dry": "npm test -- --dry"
+    "test-dry": "npm test -- --dry",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,8 @@
   "homepage": "https://github.com/MailOnline/gh-lint-demo#readme",
   "dependencies": {
     "gh-lint": "^0.7.0",
-    "tap-github-issues": "^0.7.0"
-  }
+    "tap-github-issues": "^0.7.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
